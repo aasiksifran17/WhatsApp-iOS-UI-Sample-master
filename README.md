@@ -21,7 +21,7 @@ This internship is provided by Sublime prints Pvt. Ltd. as part of the 6-Month F
 ## Usage
 
 - Clone this repository to your local machine.
-
+CLONE https://github.com/aasiksifran17/WhatsApp-iOS-UI-Sample-master.git
 ```
 - Customize the content, styling, and structure to make this resume truly your own. Tailor it to match your specific skills and experiences.
 ## Contributing
@@ -30,7 +30,7 @@ Contributions are always welcome!
 
 While a resume is typically a personal document, you can contribute to the project by sharing ideas, providing feedback, or suggesting improvements. Feel free to open an issue if you have any suggestions.
 ## License
-
+LICSENCE
 [MIT](https://choosealicense.com/licenses/mit/)
 
 This project is open-source and is available under the MIT License. You are encouraged to use, modify, and distribute it in accordance with the terms of the license.
