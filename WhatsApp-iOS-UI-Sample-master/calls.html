@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calls | TailChat</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/output.css">
+</head>
+
+<body class="bg-white bg-cover bg-center" style="background-image: url(./assets/img/background.jpg)">
+    <section class="bg-black text-sky-500 max-w-md mx-auto mt-10 pt-5 pb-0 rounded-t-lg">
+        <!-- Heading Area -->
+        <div class="flex items-center px-5 justify-between pb-1">
+            <div>
+                <a href="./index.html"><h2 class="text-2xl font-semibold">TailChat</h2></a>
+            </div>
+            <div>
+                <a href="https://github.com/Mushkir/Tailwind-UI-Sample" target="_blank" title="Go to GitHub Repo">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="transition delay-200 hover:-translate-y-1" width="32"
+                        height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!-- End -->
+        <hr>
+
+        <!-- Edit, All, Missed, Call icon divison -->
+        <div class="flex justify-between items-center px-5">
+            <!-- Edit -->
+            <div class="hover:cursor-pointer">
+                <span>Edit</span>
+            </div>
+
+            <!-- All & Missed -->
+            <div class="flex justify-between items-center bg-gray-800 rounded my-3">
+                <div class="bg-gray-400 w-16 rounded text-center text-white text-xs py-1 hover:cursor-pointer">
+                    <span>All</span>
+                </div>
+                <div class=" w-16 rounded text-center text-white text-xs py-1 cursor-pointer">
+                    <span>Missed</span>
+                </div>
+            </div>
+
+            <!-- Call icon -->
+            <div class="hover:cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M16 11V8h-3V6h3V3h2v3h3v2h-3v3h-2Zm3.95 10q-3.125 0-6.175-1.363t-5.55-3.862q-2.5-2.5-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.338t.712-.062l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3Z" />
+                </svg>
+            </div>
+        </div>
+        <!-- End -->
+
+        <!-- Calls and search bar Heading -->
+        <div class="px-5 text-3xl flex flex-col gap-3 pb-3">
+            <h1 class="text-white font-bold">Calls</h1>
+            <div class="flex items-center px-1 bg-gray-800 rounded-md gap">
+                <div class="text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z" />
+                    </svg>
+                </div>
+                <input type="text" class="text-xs w-full p-1 bg-transparent outline-none border-none text-white"
+                    placeholder="Search">
+            </div>
+        </div>
+
+        <!-- Create Call Link -->
+        <div class="px-5 pb-4">
+            <div class="bg-gray-800 flex items-center space-x-3 px-3 py-1 rounded-lg hover:cursor-pointer">
+                <!-- Link icon -->
+                <div
+                    class="bg-gray-600 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-900 hover:cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M10.59 13.41c.41.39.41 1.03 0 1.42c-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0a5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24a2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0a5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24a2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24a.973.973 0 0 1 0-1.42Z" />
+                    </svg>
+                </div>
+
+                <!-- Create call link -->
+                <div class="hover:cursor-pointer">
+                    <h2 class="capitalize">create call link</h2>
+                    <p class="text-gray-400 text-xs">Share a link for your WhatsApp call</p>
+                </div>
+            </div>
+        </div>
+        <!-- End -->
+
+        <!-- Recent -->
+        <div class="flex flex-col gap-1 px-5 mt-2">
+            <h2 class="text-white">Recent</h2>
+
+            <!-- Call history -->
+            <div class="rounded-lg">
+                <div
+                    class="flex items-center space-x-3 bg-gray-800 px-5 py-1 rounded-t-lg transition 500 hover:cursor-pointer hover:bg-gray-900">
+                    <!-- Profile Pic -->
+                    <div class="hover:cursor-pointer">
+                        <img src="https://india.postsen.com/content/uploads/2023/06/12/1b4996abb6.jpg" alt=""
+                            class="w-10 h-10 rounded-full">
+                    </div>
+
+                    <!-- Contact Detail -->
+                    <div class="flex flex-1 flex-col hover:cursor-pointer">
+                        <span class="text-red-600">பைத்தியம்</span>
+                        <div class="flex items-center space-x-1 ">
+                            <div class="text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">Missed</span>
+                        </div>
+                    </div>
+
+                    <!-- Time & Info -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-gray-400 text-xs">20:18</span>
+                        <div class="hover:cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="32" viewBox="0 0 256 256">
+                                <path fill="currentColor"
+                                    d="M108 84a16 16 0 1 1 16 16a16 16 0 0 1-16-16Zm128 44A108 108 0 1 1 128 20a108.12 108.12 0 0 1 108 108Zm-24 0a84 84 0 1 0-84 84a84.09 84.09 0 0 0 84-84Zm-72 36.68V132a20 20 0 0 0-20-20a12 12 0 0 0-4 23.32V168a20 20 0 0 0 20 20a12 12 0 0 0 4-23.32Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group Calls -->
+                <div
+                    class="flex items-center space-x-3 bg-gray-800 px-5 py-1 transition 500 hover:cursor-pointer hover:bg-gray-900">
+                    <!-- Profile Pic -->
+                    <div class="w-10 h-10 hover:cursor-pointer relative border border-gray-700 rounded-full mx-auto">
+                        <img src="https://www.koimoi.com/wp-content/new-galleries/2022/07/pirates-of-the-caribbean-ride-at-disneyland-reopens-johnny-depps-captain-jack-sparrow-makes-an-appearance-as-parkgoers-face-troubles-0001.jpg"
+                            alt="Cap Jack" class="w-3.5 h-3.5 rounded-full absolute left-1 top-1">
+                        <img src="https://i.pinimg.com/originals/62/92/9a/62929a7bfe62e2c0c0fa5a4852aeff90.jpg"
+                            alt="Barbosa" class="w-3.5 h-3.5 rounded-full absolute bottom-1 left-2">
+                        <img src="https://w0.peakpx.com/wallpaper/335/517/HD-wallpaper-pirates-of-the-caribbean-on-stranger-tides-pirates-movie-edward-teach-on-stranger-tides-film-character-2011-blackbeard-pirates-of-the-caribbean.jpg"
+                            alt="Edward Teach" class="w-3.5 h-3.5 rounded-full absolute top-2 right-1">
+
+                    </div>
+
+                    <!-- Contact Detail -->
+                    <div class="flex flex-1 flex-col hover:cursor-pointer">
+                        <p class="text-white leading-none">Captain Jacksparrow &</p>
+                        <p class="text-white">2 others</p>
+
+                        <div class="flex items-center space-x-1 ">
+                            <div class="text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="32" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M464 384.39a32 32 0 0 1-13-2.77a15.77 15.77 0 0 1-2.71-1.54l-82.71-58.22A32 32 0 0 1 352 295.7v-79.4a32 32 0 0 1 13.58-26.16l82.71-58.22a15.77 15.77 0 0 1 2.71-1.54a32 32 0 0 1 45 29.24v192.76a32 32 0 0 1-32 32ZM268 400H84a68.07 68.07 0 0 1-68-68V180a68.07 68.07 0 0 1 68-68h184.48A67.6 67.6 0 0 1 336 179.52V332a68.07 68.07 0 0 1-68 68Z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">Incoming</span>
+                        </div>
+                    </div>
+
+                    <!-- Time & Info -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-gray-400 text-xs">17:05</span>
+                        <div class="hover:cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="32" viewBox="0 0 256 256">
+                                <path fill="currentColor"
+                                    d="M108 84a16 16 0 1 1 16 16a16 16 0 0 1-16-16Zm128 44A108 108 0 1 1 128 20a108.12 108.12 0 0 1 108 108Zm-24 0a84 84 0 1 0-84 84a84.09 84.09 0 0 0 84-84Zm-72 36.68V132a20 20 0 0 0-20-20a12 12 0 0 0-4 23.32V168a20 20 0 0 0 20 20a12 12 0 0 0 4-23.32Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nithyanandha (Kailasa) -->
+                <div
+                    class="flex items-center space-x-3 bg-gray-800 px-5 py-1 transition 500 hover:cursor-pointer hover:bg-gray-900">
+                    <!-- Profile Pic -->
+                    <div class="hover:cursor-pointer">
+                        <img src="https://im.indiatimes.in/content/2022/Jun/3deaf514072bccc0b5282a9f4a63f20ee1608232e3b51782aa7bbebfed4c37ad_V_SX1080__62a7082096f37.jpg?w=820&h=540&cc=1"
+                            alt="Nithyanandha" class="w-10 h-10 rounded-full">
+                    </div>
+
+                    <!-- Contact Detail -->
+                    <div class="flex flex-1 flex-col hover:cursor-pointer">
+                        <span class="text-white">நித்யானந்த சுவாமிகள்</span>
+                        <div class="flex items-center space-x-1 ">
+                            <div class="text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">Outgoing</span>
+                        </div>
+                    </div>
+
+                    <!-- Time & Info -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-gray-400 text-xs">15:18</span>
+                        <div class="hover:cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="32" viewBox="0 0 256 256">
+                                <path fill="currentColor"
+                                    d="M108 84a16 16 0 1 1 16 16a16 16 0 0 1-16-16Zm128 44A108 108 0 1 1 128 20a108.12 108.12 0 0 1 108 108Zm-24 0a84 84 0 1 0-84 84a84.09 84.09 0 0 0 84-84Zm-72 36.68V132a20 20 0 0 0-20-20a12 12 0 0 0-4 23.32V168a20 20 0 0 0 20 20a12 12 0 0 0 4-23.32Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Samantha -->
+                <div
+                    class="flex items-center space-x-3 bg-gray-800 px-5 py-1 transition 500 hover:cursor-pointer hover:bg-gray-900">
+                    <!-- Profile Pic -->
+                    <div class="hover:cursor-pointer w-10 h-10 bg-cover bg-center rounded-full"
+                        style="background-image: url(./assets/img/Samantha.webp);">
+
+                    </div>
+
+                    <!-- Contact Detail -->
+                    <div class="flex flex-1 flex-col hover:cursor-pointer">
+                        <span class="text-white">Sammu</span>
+                        <div class="flex items-center space-x-1 ">
+                            <div class="text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="32" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M464 384.39a32 32 0 0 1-13-2.77a15.77 15.77 0 0 1-2.71-1.54l-82.71-58.22A32 32 0 0 1 352 295.7v-79.4a32 32 0 0 1 13.58-26.16l82.71-58.22a15.77 15.77 0 0 1 2.71-1.54a32 32 0 0 1 45 29.24v192.76a32 32 0 0 1-32 32ZM268 400H84a68.07 68.07 0 0 1-68-68V180a68.07 68.07 0 0 1 68-68h184.48A67.6 67.6 0 0 1 336 179.52V332a68.07 68.07 0 0 1-68 68Z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">Incoming</span>
+                        </div>
+                    </div>
+
+                    <!-- Time & Info -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-gray-400 text-xs">12:00</span>
+                        <div class="hover:cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="32" viewBox="0 0 256 256">
+                                <path fill="currentColor"
+                                    d="M108 84a16 16 0 1 1 16 16a16 16 0 0 1-16-16Zm128 44A108 108 0 1 1 128 20a108.12 108.12 0 0 1 108 108Zm-24 0a84 84 0 1 0-84 84a84.09 84.09 0 0 0 84-84Zm-72 36.68V132a20 20 0 0 0-20-20a12 12 0 0 0-4 23.32V168a20 20 0 0 0 20 20a12 12 0 0 0 4-23.32Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Momo -->
+                <div
+                    class="flex items-center space-x-3 bg-gray-800 px-5 py-1 transition 500 hover:cursor-pointer hover:bg-gray-900">
+                    <!-- Profile Pic -->
+                    <div class="hover:cursor-pointer w-10 h-10 bg-cover bg-center rounded-full"
+                        style="background-image: url(./assets/img/momo.jpeg);">
+
+                    </div>
+
+                    <!-- Contact Detail -->
+                    <div class="flex flex-1 flex-col hover:cursor-pointer">
+                        <span class="text-red-600">Momo</span>
+                        <div class="flex items-center space-x-1 ">
+                            <div class="text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="32" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M464 384.39a32 32 0 0 1-13-2.77a15.77 15.77 0 0 1-2.71-1.54l-82.71-58.22A32 32 0 0 1 352 295.7v-79.4a32 32 0 0 1 13.58-26.16l82.71-58.22a15.77 15.77 0 0 1 2.71-1.54a32 32 0 0 1 45 29.24v192.76a32 32 0 0 1-32 32ZM268 400H84a68.07 68.07 0 0 1-68-68V180a68.07 68.07 0 0 1 68-68h184.48A67.6 67.6 0 0 1 336 179.52V332a68.07 68.07 0 0 1-68 68Z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">Missed</span>
+                        </div>
+                    </div>
+
+                    <!-- Time & Info -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-gray-400 text-xs">Yesterday</span>
+                        <div class="hover:cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="32" viewBox="0 0 256 256">
+                                <path fill="currentColor"
+                                    d="M108 84a16 16 0 1 1 16 16a16 16 0 0 1-16-16Zm128 44A108 108 0 1 1 128 20a108.12 108.12 0 0 1 108 108Zm-24 0a84 84 0 1 0-84 84a84.09 84.09 0 0 0 84-84Zm-72 36.68V132a20 20 0 0 0-20-20a12 12 0 0 0-4 23.32V168a20 20 0 0 0 20 20a12 12 0 0 0 4-23.32Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unknown -->
+                <div
+                    class="flex items-center space-x-3 bg-gray-800 px-5 py-1 rounded-b-lg transition 500 hover:cursor-pointer hover:bg-gray-900">
+                    <!-- Profile Pic -->
+                    <div class="hover:cursor-pointer w-10 h-10 bg-cover bg-center rounded-full"
+                        style="background-image: url(./assets/img/vadivelu.jpeg);">
+
+                    </div>
+
+                    <!-- Contact Detail -->
+                    <div class="flex flex-1 flex-col hover:cursor-pointer">
+                        <span class="text-red-600">+94 71 422 1243</span>
+                        <div class="flex items-center space-x-1 ">
+                            <div class="text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="32" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M464 384.39a32 32 0 0 1-13-2.77a15.77 15.77 0 0 1-2.71-1.54l-82.71-58.22A32 32 0 0 1 352 295.7v-79.4a32 32 0 0 1 13.58-26.16l82.71-58.22a15.77 15.77 0 0 1 2.71-1.54a32 32 0 0 1 45 29.24v192.76a32 32 0 0 1-32 32ZM268 400H84a68.07 68.07 0 0 1-68-68V180a68.07 68.07 0 0 1 68-68h184.48A67.6 67.6 0 0 1 336 179.52V332a68.07 68.07 0 0 1-68 68Z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400">Missed</span>
+                        </div>
+                    </div>
+
+                    <!-- Time & Info -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-gray-400 text-xs">27/09/2023</span>
+                        <div class="hover:cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="32" viewBox="0 0 256 256">
+                                <path fill="currentColor"
+                                    d="M108 84a16 16 0 1 1 16 16a16 16 0 0 1-16-16Zm128 44A108 108 0 1 1 128 20a108.12 108.12 0 0 1 108 108Zm-24 0a84 84 0 1 0-84 84a84.09 84.09 0 0 0 84-84Zm-72 36.68V132a20 20 0 0 0-20-20a12 12 0 0 0-4 23.32V168a20 20 0 0 0 20 20a12 12 0 0 0 4-23.32Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End-to-end Message -->
+        <div class="flex items-center justify-center pt-3 pb-6 space-x-1">
+            <!-- Lock icon -->
+            <div class="text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="32" viewBox="0 0 15 15">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M10 5.5v.585A1.5 1.5 0 0 1 11 7.5v3A1.5 1.5 0 0 1 9.5 12h-4A1.5 1.5 0 0 1 4 10.5v-3a1.5 1.5 0 0 1 1-1.415V5.5a2.5 2.5 0 0 1 5 0Zm-4 0a1.5 1.5 0 1 1 3 0V6H6v-.5Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <p class="text-gray-400 text-xs">Your personal calls are <span class="text-sky-500">end-to-end
+                    encrypted</span></p>
+        </div>
+    </section>
+
+    <!-- Bottom Menu Section -->
+    <section class="bg-black text-sky-500 max-w-md mx-auto px-5 pb-5 mb-5 pt-2 rounded-b-lg border-t-2 border-gray-400">
+        <div class="container flex justify-between text-gray-400">
+            <!-- Status / Updates Icon -->
+            <a href="./updates.html">
+                <div
+                    class="flex flex-col justify-center hover:cursor-pointer transition delay-150 hover:-translate-y-1 hover:text-sky-500">
+                    <div class="mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 24 24">
+                            <g fill="currentColor">
+                                <path
+                                    d="M12 22c5.523 0 10-4.477 10-10c0-.906-.12-1.784-.346-2.618c-.086-.316-.455-.441-.751-.303a4.5 4.5 0 0 1-5.982-5.982c.138-.296.013-.665-.303-.75A10.012 10.012 0 0 0 12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.043 4.453c.178.356.237.763.134 1.148l-.595 2.226a1.3 1.3 0 0 0 1.591 1.591l2.226-.595a1.634 1.634 0 0 1 1.149.133A9.958 9.958 0 0 0 12 22Z" />
+                                <circle cx="19" cy="5" r="3" />
+                            </g>
+                        </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Updates</span>
+                </div>
+            </a>
+            <!-- End -->
+
+            <!-- Calls Icon -->
+            <a href="./calls.html">
+                <div
+                    class="flex flex-col justify-center hover:cursor-pointer transition delay-150 hover:-translate-y-1 hover:text-sky-500">
+                    <div class="text-sky-500 mx-auto relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                        <div class="text-xs text-white bg-red-500 w-4 text-center rounded-full absolute top-0 left-3">
+                            2
+                        </div>
+                    </div>
+                    <span class="text-xs text-gray-400">Calls</span>
+                </div>
+            </a>
+            <!-- End -->
+
+            <!-- Community Icon -->
+            <a href="./community.html">
+                <div
+                    class="flex flex-col justify-center hover:cursor-pointer transition delay-150 hover:-translate-y-1 hover:text-sky-500">
+                    <div class="mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 16 16">
+                            <path fill="currentColor"
+                                d="M3 3a2 2 0 1 1 4 0a2 2 0 0 1-4 0Zm6.779 1.584l.042.032a2 2 0 1 0-.042-.032ZM6.268 6A2 2 0 1 1 9.73 7.998A2 2 0 0 1 6.268 6ZM2.5 6h2.67a3.013 3.013 0 0 0 .594 3H5.5a2.501 2.501 0 0 0-2.355 1.658a3.733 3.733 0 0 1-.933-.543C1.46 9.51 1 8.616 1 7.5A1.5 1.5 0 0 1 2.5 6Zm8 3a2.5 2.5 0 0 1 2.354 1.658c.34-.139.655-.32.934-.543C14.54 9.51 15 8.616 15 7.5A1.5 1.5 0 0 0 13.5 6h-2.67c.11.313.17.65.17 1a2.99 2.99 0 0 1-.764 2h.264Zm1.387 1.928c.073.176.113.37.113.572c0 1.116-.459 2.01-1.212 2.615C10.047 14.71 9.053 15 8 15c-1.053 0-2.047-.29-2.788-.885C4.46 13.51 4 12.616 4 11.5A1.496 1.496 0 0 1 5.5 10h5a1.5 1.5 0 0 1 1.387.928Z" />
+                        </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Communities</span>
+                </div>
+            </a>
+            <!-- End -->
+
+            <!-- Chat Icon -->
+            <a href="./index.html">
+                <div
+                    class=" flex flex-col justify-center hover:cursor-pointer transition delay-150 hover:-translate-y-1 hover:text-sky-500">
+                    <div class="relative mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 32 32">
+                            <path fill="currentColor"
+                                d="M2 13.5C2 7.701 6.701 3 12.5 3S23 7.701 23 13.5S18.3 24 12.5 24c-1.686 0-3.281-.398-4.695-1.106L3.89 23.943a1.5 1.5 0 0 1-1.837-1.837l1.05-3.918A10.434 10.434 0 0 1 2 13.5Zm10.5 12c.666 0 1.319-.054 1.955-.158A8.462 8.462 0 0 0 19.5 27c1.486 0 2.88-.38 4.094-1.049a1 1 0 0 1 .741-.09l3.456.926l-.926-3.458a1 1 0 0 1 .09-.74A8.457 8.457 0 0 0 28 18.5a8.49 8.49 0 0 0-3.665-6.991a11.911 11.911 0 0 0-.787-2.7A10.503 10.503 0 0 1 30 18.5a10.478 10.478 0 0 1-1.102 4.688l1.05 3.918a1.5 1.5 0 0 1-1.838 1.837l-3.915-1.049A10.46 10.46 0 0 1 19.5 29c-3.124 0-5.93-1.364-7.853-3.53c.282.02.566.03.853.03Z" />
+                        </svg>
+                        <div class="text-xs text-white bg-red-500 w-4 text-center rounded-full absolute top-0 right-0">
+                            14
+                        </div>
+                    </div>
+                    <span class="text-xs text-gray-400">Chats</span>
+                </div>
+            </a>
+            <!-- End -->
+
+            <!-- Settings Icon -->
+            <a href="./settings.html">
+                <div
+                    class="flex flex-col justify-center hover:cursor-pointer transition delay-150 hover:-translate-y-1 hover:text-sky-500">
+                    <div class="text-center mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 256 256">
+                            <path fill="currentColor"
+                                d="M232 124h-20.1a83.35 83.35 0 0 0-9.27-34.47l17.44-10.07a4 4 0 0 0-4-6.92l-17.45 10.07a84.54 84.54 0 0 0-25.23-25.23l10.07-17.45a4 4 0 0 0-6.92-4l-10.07 17.44A83.35 83.35 0 0 0 132 44.1V24a4 4 0 0 0-8 0v20.1a83.35 83.35 0 0 0-34.47 9.27L79.46 35.93a4 4 0 0 0-6.92 4l10.07 17.45a84.54 84.54 0 0 0-25.23 25.23L39.93 72.54a4 4 0 1 0-4 6.92l17.44 10.07A83.35 83.35 0 0 0 44.1 124H24a4 4 0 0 0 0 8h20.1a83.35 83.35 0 0 0 9.27 34.47l-17.44 10.07a4 4 0 0 0 2 7.46a3.9 3.9 0 0 0 2-.54l17.45-10.07a84.54 84.54 0 0 0 25.23 25.23l-10.07 17.45a4 4 0 0 0 1.46 5.46a4 4 0 0 0 5.46-1.46l10.07-17.44A83.35 83.35 0 0 0 124 211.9V232a4 4 0 0 0 8 0v-20.1a83.35 83.35 0 0 0 34.47-9.27l10.07 17.44a4 4 0 0 0 6.92-4l-10.07-17.45a84.54 84.54 0 0 0 25.23-25.23l17.45 10.07a3.9 3.9 0 0 0 2 .54a4 4 0 0 0 2-7.46l-17.44-10.07A83.35 83.35 0 0 0 211.9 132H232a4 4 0 0 0 0-8ZM128 52a76.09 76.09 0 0 1 75.89 72h-73.58L93.53 60.3A75.59 75.59 0 0 1 128 52Zm-76 76a76 76 0 0 1 34.61-63.69L123.38 128l-36.77 63.69A76 76 0 0 1 52 128Zm76 76a75.59 75.59 0 0 1-34.47-8.3l36.78-63.7h73.58A76.09 76.09 0 0 1 128 204Z" />
+                        </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Settings</span>
+                </div>
+            </a>
+            <!-- End -->
+        </div>
+    </section>
+
+</body>
+
+</html>
